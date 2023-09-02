@@ -1,0 +1,13 @@
+<p>booklist works!</p>
+
+<div class="book-list-container">
+    <div class="book" *ngFor="let book of books">
+        <ul>
+            <li>
+                <a href="{{book.id}}">
+                    <img src="{{book.img}}" alt="{{book.title}}">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+* {
+    background: rgb(0, 0, 0);
+}
+header {
+    display: flex;
+    background: rgb(0, 0, 0);
+    justify-content: space-between;
+    align-items: center;
+    width: 99%;
+    height: 7%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 0 0.8rem 0.8rem;
+    position: fixed;
+    top: 0;
+}
+
+header div {
+    margin: 1rem;
+    color: white;
+}
+
+.menu-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    cursor: default;
+    font-size: 1.5rem;
+    padding: 0;
+    background: transparent;
+    transition: 0.1s ease-in;
+}
+
+.menu-logo:hover {
+    font-size: 1.6rem;
+}

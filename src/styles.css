@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import icons */
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'); /* menu icon */
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'); /* search icon */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Borel&family=Roboto+Condensed:wght@300;400&family=Ubuntu:wght@300&display=swap');
+*{
+    background: green;
+    background-image: url('https://p4.wallpaperbetter.com/wallpaper/866/795/795/light-grey-curves-wallpaper-preview.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
