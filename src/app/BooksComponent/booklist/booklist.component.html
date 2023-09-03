@@ -1,13 +1,23 @@
-<p>booklist works!</p>
-
-<div class="book-list-container">
-    <div class="book" *ngFor="let book of books">
-        <ul>
-            <li>
-                <a href="{{book.id}}">
-                    <img src="{{book.img}}" alt="{{book.title}}">
-                </a>
-            </li>
-        </ul>
+<div style="width: 100%; display: flex; justify-content: center; background: white;">
+    <div class="book-list-title">
+        <h2> BOOK LIST </h2>
+        <div class="search">
+            <form (submit)="onSearchSubmit(searchQuery.value)">
+              <input type="text" placeholder="Books search" #searchQuery>
+              <button type="submit"><i class="fi fi-br-search"></i></button>
+            </form>
+        </div>
     </div>
 </div>
+
+
+<!-- book-list.component.html -->
+<div style="display: flex; width: 100%; justify-content: center;">
+    <div class="books-container">
+        <div *ngFor="let book of books" class="book">
+            <img *ngIf="book.volumeInfo.imageLinks" [src]="book.volumeInfo.imageLinks.thumbnail" alt="{{ book.volumeInfo.title }}" (click)="onSelectBook(book.id)">
+        </div>
+    </div>
+</div>
+
+  

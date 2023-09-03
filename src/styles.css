@@ -1,14 +1,16 @@
 /* Import icons */
 @import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'); /* menu icon */
 @import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'); /* search icon */
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'); /* back icon */
+
 
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Borel&family=Roboto+Condensed:wght@300;400&family=Ubuntu:wght@300&display=swap');
 *{
-    background: green;
-    background-image: url('https://p4.wallpaperbetter.com/wallpaper/866/795/795/light-grey-curves-wallpaper-preview.jpg');
+    background: rgb(255, 255, 255);
+    /* background-image: url('https://p4.wallpaperbetter.com/wallpaper/866/795/795/light-grey-curves-wallpaper-preview.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; */
 }

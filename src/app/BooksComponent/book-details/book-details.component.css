@@ -1,0 +1,47 @@
+.book-details {
+    margin-top: 5%;
+}
+
+img {
+    margin-top: 4rem;
+    float: left;
+    margin-left: 5rem;
+    width: 300px;
+    height: 360px;
+    border-radius: 0.5rem;
+}
+
+button {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    transition: 0.9s;
+    margin-left: 4rem;
+}
+
+button:hover i {
+    color: rgb(82, 82, 82);
+}
+
+/* Estilos para la caja de descripción */
+.description-box {
+    max-height: 250px; /* Altura máxima deseada */
+    max-width: 400px;
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+    border: 1px solid transparent; /* Borde opcional para resaltar el área */
+    padding: 10px; /* Espacio interno opcional */
+  }
+
+  /* Estilos personalizados para el scrollbar vertical */
+.description-box::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar */
+  }
+  
+  .description-box::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 68, 215); /* Color del thumb (la parte que se arrastra) */
+    border-radius: 5px; /* Borde redondeado del thumb */
+  }
+  
+  .description-box::-webkit-scrollbar-thumb:hover {
+    background-color: #0056b3; /* Cambio de color en hover */
+  }

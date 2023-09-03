@@ -1,0 +1,121 @@
+.books-container {
+    float: left;
+    height: 80vh;
+    width: 85%;
+    /* border: 2px solid blue; */
+    padding: 2rem;
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+}
+
+.book {
+    margin: 0 0.3rem 2rem 0.3rem;
+    opacity: 0.8;
+    display: flex;
+    border-radius: 0.5rem;
+    height: 250px;
+    width: 200px;
+    justify-content: center;
+    /* border: 2px solid black; */
+    overflow: hidden;
+    transition: 0.1s;
+}
+.book:hover {
+    opacity: 1;
+}
+
+.book img {
+    border-radius: 0.5rem;
+    height: 250px;
+    width: 180px;
+    display: block;
+    transition: 0.2s;
+}
+
+.book img:hover {
+    height: 260px;
+    width: 190px;
+}
+
+.book-list-title {
+    display: flex;
+    text-align: center;
+    position: fixed;
+    z-index: 2;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 1.9rem;
+    padding: 0.5rem;
+    width: 99%;
+    height: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+}
+.book-list-title h2 {
+    color: rgb(39, 39, 39);
+    margin-left: 3rem;
+    cursor: default;
+}
+
+
+/* formulario de buscar */
+.search {
+    border-radius: 0.4rem;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+.search form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: transparent; /* Color de fondo del formulario */
+  }
+
+  .search form:hover {
+    border: 1px solid rgb(0, 68, 215);
+  }
+
+  
+
+  .search input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 2rem;
+    outline: none;
+    font-size: 0.9rem; /* Tamaño de fuente */
+    background-color: transparent; /* Fondo transparente */
+  }
+
+  .search button {
+    color: #313131;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; /* Espacio alrededor del botón */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .search button:hover i {
+    color: blue;
+  }
+
+
+  /* MEDIA QUERIES ( MEDIUM DEVICES) */
+@media screen and (max-width: 1024px) {
+
+}
+
+/* MEDIA QUERIES ( SMALL DEVICES) */
+@media screen and (max-width: 600px) {
+
+}
