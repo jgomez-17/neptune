@@ -1,16 +1,39 @@
 /* Import icons */
 @import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'); /* menu icon */
 @import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'); /* search icon */
-@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'); /* back icon */
-
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'); /* search icon2 */
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'); /* back icon */
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');/* back icon2 */
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'); /* List icon */
 
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Borel&family=Roboto+Condensed:wght@300;400&family=Ubuntu:wght@300&display=swap');
 *{
-    background: rgb(255, 255, 255);
     /* background-image: url('https://p4.wallpaperbetter.com/wallpaper/866/795/795/light-grey-curves-wallpaper-preview.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-attachment: fixed; */
 }
+
+
+/* En styles.css o en book-details.component.css */
+.book-details-enter {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  
+  .book-details-leave {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .book-details-enter-active,
+  .book-details-leave-active {
+    transition: all 0.3s;
+  }
+  
+  .book-details-leave-active {
+    opacity: 0; /* Desvanece el componente durante la salida */
+    transform: scale(0.5); /* Escala el componente hacia abajo durante la salida */
+  }

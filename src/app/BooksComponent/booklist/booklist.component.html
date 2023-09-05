@@ -1,14 +1,18 @@
-<div style="width: 100%; display: flex; justify-content: center; background: white;">
-    <div class="book-list-title">
-        <h2> BOOK LIST </h2>
-        <div class="search">
-            <form (submit)="onSearchSubmit(searchQuery.value)">
-              <input type="text" placeholder="Books search" #searchQuery>
-              <button type="submit"><i class="fi fi-br-search"></i></button>
-            </form>
-        </div>
-    </div>
-</div>
+<app-head-nav></app-head-nav>
+<ul class="nav justify-content-around bg-light navbar-light fixed-top">
+    <li class="nav-item" style="display: flex; padding-top: 5px;">
+        <h2> BOOKS </h2>
+        <i style="width: 2px; font-size: 1.1rem; padding-top: 1.1px;" class=
+        "fi fi-rr-list-check"
+        ></i>
+    </li>
+    <li class="nav-item">
+        <input type="text" [(ngModel)]="searchQuery" placeholder="Search">
+        <button class="btn btn-sm btn-light" (click)="searchBooks()">
+            <i class="fi fi-rs-search"></i>
+        </button>
+    </li>
+</ul>
 
 
 <!-- book-list.component.html -->

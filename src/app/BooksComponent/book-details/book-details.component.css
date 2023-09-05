@@ -1,33 +1,70 @@
 .book-details {
-    margin-top: 5%;
+    display: flex;
+    margin-top: 7rem;
+    justify-content: center;
+}
+
+.book-details h1 {
+  width: 89%;
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-left: 0.4rem;
+}
+.book-details p {
+  margin-left: 0.4rem;
+}
+
+.details-container {
+  max-height: 370px;
+  font-family: 'Roboto Condensed', sans-serif;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  margin-top: 2.5rem;
+  padding: 5px;
+  border-radius: 0.5rem;
 }
 
 img {
-    margin-top: 4rem;
-    float: left;
-    margin-left: 5rem;
+    margin-top: 2.5rem;
     width: 300px;
     height: 360px;
     border-radius: 0.5rem;
 }
 
-button {
-    background: transparent;
-    border: none;
-    font-size: 2rem;
-    transition: 0.9s;
-    margin-left: 4rem;
+
+/* MENU SUPERIOR */
+nav {
+  margin-top: 3rem;
 }
 
-button:hover i {
-    color: rgb(82, 82, 82);
+button {
+    background: transparent;
+    padding: 7px 11px 4px 11px;
+    border: none;
+    transition: 0.9s;
+    margin-left: 13rem;
+    transition: 0.7s;
+}
+
+button i {
+  font-weight: bold;
+}
+
+
+button:hover {
+    background: rgb(234, 234, 234);
 }
 
 /* Estilos para la caja de descripción */
 .description-box {
-    max-height: 250px; /* Altura máxima deseada */
-    max-width: 400px;
+  background: rgb(255, 255, 255);
+  font-size: 0.9rem;
+    height: 276px; /* Altura máxima deseada */
+    width: 450px;
     overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+    border-radius: 0.5rem;
     border: 1px solid transparent; /* Borde opcional para resaltar el área */
     padding: 10px; /* Espacio interno opcional */
   }
@@ -38,10 +75,75 @@ button:hover i {
   }
   
   .description-box::-webkit-scrollbar-thumb {
-    background-color: rgb(0, 68, 215); /* Color del thumb (la parte que se arrastra) */
+    background-color: rgba(0, 68, 215, 0.573); /* Color del thumb (la parte que se arrastra) */
     border-radius: 5px; /* Borde redondeado del thumb */
+    transition: 0.6s;
   }
   
   .description-box::-webkit-scrollbar-thumb:hover {
-    background-color: #0056b3; /* Cambio de color en hover */
+    background-color: #0057b3c3; /* Cambio de color en hover */
   }
+
+
+    /* MEDIA QUERIES ( MEDIUM DEVICES) */
+@media screen and (max-width: 1024px) {
+  button {
+    margin-left: 4rem;
+  }
+  .book-details {
+    display: flex;
+  }
+  .details-container {
+    margin-left: 1rem;
+    max-height: 370px;
+  }
+  .book-details h1 {
+    font-weight: bold;
+    font-size: 1.8rem;
+    width: 90%;
+  }
+  .book-details p {
+    font-size: 0.8rem;
+  }
+  img {
+    width: 230px;
+    height: 370px;
+  }
+  .description-box {
+    font-size: 0.9rem;
+    height: 230px; /* Altura máxima deseada */
+    width: 290px;
+  }
+}
+
+/* MEDIA QUERIES ( SMALL DEVICES) */
+@media screen and (max-width: 600px) {
+  button {
+    margin-left: 1rem;
+  }
+  .book-details {
+    display: flex;
+  }
+  .details-container {
+    margin-left: 1rem;
+    max-height: 340px;
+  }
+
+  .book-details h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 100%;
+  }
+  .book-details p {
+    font-size: 0.8rem;
+  }
+  img {
+    width: 220px;
+    height: 340px;
+  }
+  .description-box {
+    font-size: 0.7rem;
+    height: 245px; /* Altura máxima deseada */
+    width: 220px;
+  }
+}

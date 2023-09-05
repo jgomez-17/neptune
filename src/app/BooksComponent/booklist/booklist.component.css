@@ -39,83 +39,70 @@
     width: 190px;
 }
 
-.book-list-title {
-    display: flex;
-    text-align: center;
-    position: fixed;
-    z-index: 2;
-    font-family: 'Roboto Condensed', sans-serif;
-    margin-top: 1.9rem;
-    padding: 0.5rem;
-    width: 99%;
-    height: 3rem;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
+/* LISTA DE LIBROS */
+
+ul {
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 2.9rem;
 }
-.book-list-title h2 {
-    color: rgb(39, 39, 39);
-    margin-left: 3rem;
-    cursor: default;
+h2 {
+  color: black;
+  font-size: 1.22rem;
+  font-weight: bold;
+}
+li {
+  margin: 0.7rem;
+}
+i {
+  margin-left: 9px;
 }
 
+/* BARRA DE BUSQUEDA */
 
-/* formulario de buscar */
-.search {
-    border-radius: 0.4rem;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    margin-right: 3rem;
-}
-
-.search form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #000000;
-    border-radius: 0.4rem;
-    transition: 0.2s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: transparent; /* Color de fondo del formulario */
-  }
-
-  .search form:hover {
-    border: 1px solid rgb(0, 68, 215);
-  }
-
-  
-
-  .search input[type="text"] {
+li input[type="text"] {
     flex: 1;
-    padding: 8px;
-    border: none;
-    border-radius: 2rem;
+    padding: 5px;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 4px rgb(216, 216, 216);
+    border-radius: 0.5rem;
     outline: none;
-    font-size: 0.9rem; /* Tamaño de fuente */
+    font-size: 0.8rem; /* Tamaño de fuente */
     background-color: transparent; /* Fondo transparente */
   }
 
-  .search button {
-    color: #313131;
+li button {
+    color: #000000;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px; /* Espacio alrededor del botón */
+    border-radius: 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
+li button i {
+  padding: 0 10px 1px 2px;
+  }
 
-  .search button:hover i {
+li button:hover i {
+  background: transparent;
     color: blue;
   }
 
 
   /* MEDIA QUERIES ( MEDIUM DEVICES) */
 @media screen and (max-width: 1024px) {
-
+  .books-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* MEDIA QUERIES ( SMALL DEVICES) */
 @media screen and (max-width: 600px) {
-
+  .books-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .book-list-title h2 {
+    margin-left: 1rem;
+  }
+  .search {
+    margin-right: 1rem;
+  }
 }

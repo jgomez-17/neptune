@@ -1,15 +1,21 @@
-<div style="width: 99%; display: flex; background: white; top: 7%; position: fixed; padding: 1rem;">
-    <button (click)="goBack()"><i class="fi fi-rr-arrow-small-left"></i></button>
-</div>
-<div *ngIf="bookDetails" class="book-details">
-    <div style="width: 60%; float: right; margin-right: 4rem; margin-top: 2.2rem; font-family: 'Roboto Condensed', sans-serif;">
+<nav class="navbar bg-body-tertiary fixed-top justify-content-around">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <button class="rounded-circle" (click)="goBack()">
+                <i class="fi fi-rr-angle-small-left"></i>
+            </button>
+        </a>
+    </div>
+</nav>
+
+<div *ngIf="bookDetails" class="book-details" [@zoomInOut]>
+    <img *ngIf="bookDetails.volumeInfo.imageLinks" [src]="bookDetails.volumeInfo.imageLinks.thumbnail" alt="{{ bookDetails.volumeInfo.title }}">
+    <div class="details-container bg-body-tertiary">
         <h1>{{ bookDetails.volumeInfo.title }}</h1>
         <p>Autor(es): {{ bookDetails.volumeInfo.authors?.join(', ') }}</p>
         <div class="description-box">
             <div [innerHTML]="sanitizeDescription(bookDetails.volumeInfo.description)"></div>
         </div>
     </div>
-    <img *ngIf="bookDetails.volumeInfo.imageLinks" [src]="bookDetails.volumeInfo.imageLinks.thumbnail" alt="{{ bookDetails.volumeInfo.title }}">
-    
 </div>
   

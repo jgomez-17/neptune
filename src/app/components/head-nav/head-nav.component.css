@@ -1,34 +1,35 @@
-* {
-    background: rgb(3, 28, 39);
+ul nav {
+    
 }
-header {
-    display: flex;
-    background: rgb(3, 28, 39);
-    justify-content: space-between;
-    align-items: center;
-    z-index: 3;
-    width: 99%;
-    height: 7%;
-    margin: 0;
-    padding: 0;
-    border-radius: 0 0 0.8rem 0.8rem;
-    position: fixed;
-    top: 0;
+.nav-link {
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: 'Abel', sans-serif;
+    color: rgb(0, 89, 255);
+    transition: 0.2s;
+}
+.nav-link span {
+    margin-left: 5px;
+    color: whitesmoke;
 }
 
-header div {
-    margin: 1rem;
-    color: white;
-}
 
-h5 {
-    font-family: 'Bebas Neue', sans-serif;
-    cursor: default;
-    font-size: 1.8rem;
-    padding: 0;
-    transition: 0.1s ease-in;
-}
-
-h5:hover {
-    font-size: 1.85rem;
-}
+  /* MEDIA QUERIES ( MEDIUM DEVICES) */
+  @media screen and (max-width: 1024px) {
+    h5 {
+        font-size: 1.6rem;
+    }
+    h5:hover {
+        font-size: 1.65rem;
+    }
+  }
+  
+  /* MEDIA QUERIES ( SMALL DEVICES) */
+  @media screen and (max-width: 600px) {
+    h5 {
+        font-size: 1.4rem;
+    }
+    h5:hover {
+        font-size: 1.45rem;
+    }
+  }

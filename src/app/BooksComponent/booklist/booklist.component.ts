@@ -1,51 +1,73 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { query } from '@angular/animations';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-booklist',
   templateUrl: './booklist.component.html',
   styleUrls: ['./booklist.component.css']
 })
-export class BooklistComponent implements OnInit{
+export class BooklistComponent implements OnInit {
 
   books: any[] = []; 
   apiKey = 'AIzaSyBeRb2twAEE-4V6q6gpA9y1EzIZ05EexMs';
+  searchQuery: string = '';
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+
+    private http: HttpClient, 
+    private router: Router,
+    private route: ActivatedRoute,
+
+    ) {}
 
   
   ngOnInit(): void {
-    this.searchBooks('angukar');
+    this.route.queryParams.subscribe((queryParams) => {
+      this.searchQuery = queryParams ['q'] || '';
+      this.searchBooks();
+    })
   }
 
-  searchBooks(query: string) {
+  searchBooks() {
+
+    const defaultQuery = 'angular'; // Término de búsqueda predeterminado
+    const query = this.searchQuery.trim() || defaultQuery;
+
     // Verificar si el query está vacío o contiene solo espacios en blanco
-    if (!query.trim()) {
+    if (!this.searchQuery.trim()) {
       this.books = [];
       return;
     }
 
     const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${this.apiKey}`;
 
-    this.http.get(url).subscribe((data: any) => {
-      if (data.items) {
-        this.books = data.items;
-      } else {
-        this.books = [];
+    this.http.get(url).subscribe(
+      (data: any) => {
+        if (data.items) {
+          this.books = data.items;
+        } else {
+          this.books = [];
       }
+
+      
+      this.router.navigate([], {
+        relativeTo: this.route,
+        queryParams: { q: query },
+        queryParamsHandling: 'merge',
+      });
     }, 
     (error) => {
       console.error('Error al hacer la solicitud:', error);
     }
     );
   }
-  onSearchSubmit(query: string) {
-    this.searchBooks(query);
-  }
 
   onSelectBook(bookId: string) {
-    this.router.navigate(['/book', bookId]);
+    this.router.navigate(['/book', bookId], {
+      queryParams: { q: this.searchQuery },
+      queryParamsHandling: 'merge',
+    });
   }
-
 }
